@@ -5,11 +5,18 @@ import { motion } from "framer-motion";
 //contexts:
 import { SetModalContext } from "../context/AddModalContext";
 import { ListContext } from "../context/ListContext";
+import { SetListContext } from "../context/ListContext";
+import { ShowInvalidInfoModalContext } from "../context/InvalidInfoModal";
+
+//Components
+import TodayList from "./TodayList";
 
 export default function AddPage(){
     const [toDoList, setList] = useState({title: "", date: "", prior: ""});
     const setModalVisibility = useContext(SetModalContext)
     const list = useContext(ListContext)
+    const setListC = useContext(SetListContext)
+    const setInvalidIndoModal = useContext(ShowInvalidInfoModalContext)
 
     function titleInpHandler(e){
         setList(prev=>{
@@ -31,8 +38,11 @@ export default function AddPage(){
 
     function submitHandler(event){
         event.preventDefault();
-        list.push(toDoList)
-        console.log(list);
+        if(!toDoList.title && !TodayList.date){
+            setInvalidIndoModal(true)
+            return
+        }
+        setListC(prev => [...prev, toDoList])
         closeModal();
     }
 
