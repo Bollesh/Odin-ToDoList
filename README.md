@@ -18,8 +18,8 @@ To set up and run the project locally:
 
 1. Clone the repository:
    ```sh
-   git clone <repository-url>
-   cd todo-manager
+   git clone https://github.com/Bollesh/Odin-ToDoList.git
+   cd Odin-ToDoList/
    ```
 
 2. Install dependencies:
