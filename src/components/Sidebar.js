@@ -37,7 +37,6 @@ export default function Sidebar(){
             <motion.button variants={buttonVariant} whileHover="hover" className="home" onClick={setHome}>Home</motion.button>
             <motion.button variants={buttonVariant} whileHover="hover" className="today" onClick={setToday}>Today</motion.button>
             <motion.button variants={buttonVariant} whileHover="hover" className="week" onClick={setWeek}>Week</motion.button>
-            <motion.button variants={buttonVariant} whileHover="hover" className="notes">Notes</motion.button>
             <motion.button variants={buttonVariant} whileHover="hover" className="add" onClick={modalVisibility}>
                 <img src={require('../images/plus-solid.svg')} alt="plus icon" />
             </motion.button>
