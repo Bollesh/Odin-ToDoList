@@ -1,4 +1,4 @@
-### Odin - ToDoList
+# Odin - ToDoList
 **Todo List Manager**
 
 ### Description
